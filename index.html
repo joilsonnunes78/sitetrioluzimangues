@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REPERTÓRIO - Trio Luzimangues</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        .scroll-controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 1rem;
+            justify-content: center;
+        }
+
+        .scroll-controls button,
+        .scroll-controls input {
+            padding: 0.6rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .scroll-controls button {
+            background-color: #4CAF50; 
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .scroll-controls button:hover {
+            background-color: #45a049;
+        }
+
+        .scroll-controls input[type="number"] {
+            width: 50px;
+            text-align: center;
+        }
+
+        .song-lyrics {
+            max-height: 1000px; /* Adiciona uma altura máxima para a rolagem */
+            overflow-y: auto;
+            display: none; /* Inicialmente escondido */
+            background: #f9f9f9; /* Um tom de fundo levemente cinza para as letras */
+            padding: 1.2rem;
+            border: 1px solid #eee; /* Borda sutil */
+            border-radius: 0.3rem;
+            white-space: pre-wrap; /* Mantém a formatação das letras */
+            font-size: 0.9rem; /* Tamanho da fonte das letras */
+            line-height: 1.4; /* Melhora a legibilidade das letras */
+        }
+
+        .song-info { /* Nova classe para agrupar título e subtítulos */
+            display: block;
+        }
+
+        .song-info.hidden {
+            display: none;
+        }
+
+        .back-button {
+            display: none; /* Escondido inicialmente */
+            background-color: #f44336; /* Cor de destaque para o botão voltar */
+            color: white;
+            border: none;
+            padding: 0.7rem 1.2rem;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+            margin-left: auto;
+            margin-right: auto;
+            display: block; /* Para centralizar o botão voltar */
+            max-width: 150px; /* Limita a largura do botão voltar */
+        }
+
+        .back-button:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="cabecalho">
+            <div class="instrumentos-topo">
+                <img src="instrumento3.png" alt="Zabumba" style="width: 200px; height: auto;" >
+            </div>
+            <h1>Trio Luzimangues - REPERTÓRIO</h1>
+            <p>Somente para uso interno</p>
+        </div>
+    </header>
+
+    <input type="search" id="search" placeholder="Buscar música..." oninput="filterSongs()" />
+
+    <div class="scroll-controls" id="scrollControls">
+        <button id="playPause">Play</button>
+        <label for="scrollSpeed">Velocidade:</label>
+        <input type="number" id="scrollSpeed" value="150" min="60" max="300">
+    </div>
+
+    <button class="back-button" onclick="showList()">← Voltar para a lista</button>
+
+    <div id="songs">
+        <div class="song">
+            <div class="song-info">
+                <div class="song-title" onclick="showLyrics('forro-lento')"><h2> FORRÓ LENTO </h2></div>
+                <h3>Forro do xenhenhém</h3>
+                <h3>Bulir com tu </h3>
+                <h3>Confidencias </h3>
+                <h3>Anjo querubim </h3>
+                <h3>Forró bodó</h3>
+            </div>
+            <div class="song-lyrics" id="forro-lento">
+                <pre>
+                    <B>Forro do xenhenhém
+                        Elba ramalho
+                    </B>
+                    Morena forrozeira do cangote suado
+                    Tô ficando arriado com você, meu bem
+                    Com esse rebolado teu corpinho fica mole
+                    E nesse bole-bole, nesse vai-e-vem
+
+                    O coração da gente chega a latejar
+                    A gente só deseja passar bem
+
+                    Com você meu bem
+                    No xenhenhém, no xenhenhém, no xenhenhém
+                    Com você meu bem
+                    No xenhenhém, no xenhenhém, no xenhenhém
+
+                    Quem foi esse inteligente que inventou o forró
+                    Fez a morena levantar pó
+                    Ele é um artista, trabalhou bem
+                    E a morena forrozeira é de quem
+                    Estiver disposto pra ganhar no xenhenhém
+
+                    Xenhenhém, xenhenhém, xenhenhém
+                    Xenhenhém, xenhenhém, xenhenhém
+                    Xenhenhém, xenhenhém, xenhenhém
+                    Vou fazer tudo pra ganhar no xenhenhém
+
+                    Xenhenhém, xenhenhém, xenhenhém
+                    Xenhenhém, xenhenhém, xenhenhém
+                    Xenhenhém, xenhenhém, xenhenhém
+                    Vou fazer tudo pra ganhar no xenhenhém
+
+
+                    <B>Bulir com Tu
+                        Antonio Barros
+                    </B>
+
+                    Se você pensa que chega de madrugada
+                    Assim como quem não quer nada
+                    Meu bem se enganou
+
+                    Não adianta se deitar na rede
+                    Porque a minha sede você ou fazer tudo pra você perder o sono
+                    Me tirar desse abandono
+                    Eu vou me sacudir
+
+                    Eu vou lá dentro e pego uma viola
+                    E de repente faço um verso pra você sentir
+                    Eu quero ver amanhecer o dia
+                    Assim nessa agonia
+                    Eu vou bulir
+
+                    Eu vou bulir, bulir com tu, eu vou bulir
+                    Eu vou bulir, bulir com tu, eu vou bulir
+                    Eu vou bulir, bulir com tu, eu vou bulir
+                    Eu vou bulir, bulir com tu, eu vou bulir
+
+
+                    <B>Confidência
+                        Jorge de Altinho
+                    </B>
+                    Eu tenho um segredo menina cá dentro do peito
+                    Que a noite passada quase que sem jeito
+                    Vendo a madrugada eu ia revelar
+                    Quando um amor diferente tava nos meus braços
+                    
+                    Olhei pro espaço e vi lá no céu
+                    Uma estrela cadente se mudar
+                    Ai eu lembrei das palavras doces que um dia eu falei pra alguém
+                    Que tanto, tanto me amou me beijou como ninguém
+                    Que flutuou nos meus braços entrou nos meus planos
+                    E os nossos segredos confidenciamos sem hesitar
+                    
+
+                    <B>Anjo Querubim
+                        Petrúcio Amorim
+                    </B>
+                    Fiz você pra mim
+                   Meu brinquedo
+                   Meu anjo querubim
+                   Meu segredo
+                   Guardado só pra mim
+                   Meu amor mais louco
+
+                   Até de tanto amar
+                   Fiz também algo
+                   Pra gente ninar
+                   Uma criança
+                   Pra gente adorar
+                   Tudo no sufoco
+
+                   E você não gosta mais de mim
+                   Vem dizer que eu não soube dar amor
+                   E achar que a vida é mesmo assim
+                   Cada um leva o barco sofredor
+
+                   Meu baião
+                   Coração
+                   Arranca essa dor do meu peito pra eu não chorar
+                   Meu baião
+                   Coração
+                   Arranca essa dor do meu peito pra eu não chorar
+
+                   Comprei sururu, camarão
+                   Fiz batida de caju
+                   Dancei rumba e até maracatu
+                   Pra te fazer feliz
+                   Fui até Natal
+                   Salvador, Paraíba, Bacabal
+                   Em Belém você quase passou mal
+                   E eu te fiz feliz
+
+                   E você não gosta mais de mim
+                   Vem dizer que eu não soube dar amor
+                   E achar que a vida é mesmo assim
+                   Cada um leva o barco sofredor
+        
+              
+
+
+                  <B>Forróbodó
+                     Mastruz Com Leite
+</B>
+                  Fui um forró
+                  Pra cá do Caicó
+                  Ninguém bodô no forróbodó
+                  Fui um forró
+                  Pra cá do Caicó
+                  Ninguém bodô no forróbodó
+                  Ninguém bodô no forróbodó
+                  Ninguém bodô no forróbodó
+                  Ninguém bodô no forróbodó
+
+                  Seu Malaquias e Maria Benta
+                  Quase me mata com
+                  Seu peba na pimenta
+                  Zé Caxangá era o tocador
+                  Mas só tocava, ninguém bodô
+                  Ninguém bodô no forróbodó
+                  Ninguém bodô no forróbodó
+                  Ninguém bodô no forróbodó
+                  Ninguém bodô no forróbodó
+
+                  E Carolina chegou também
+                  Mas só queria dançar o xenhenhem
+                  Zé Caxangá era o tocador
+                  E só tocava ninguém bodô
+                  Ninguém bodô no forróbodó
+                  Ninguém bodô no forróbodó
+                  Ninguém bodô no forróbodó
+
+                  Tinha pra mais de quinhentos convidados
+                  Dezessete e Setecentos, ta enganado!
+                  Dezesseis e setecentos, oxente fique calado!
+                  Dezessete e setecentos, tá enganado!
+
+                  Ninguém bodô no forróbodó
+                  Ninguém bodô no forróbodó
+                  Ninguém bodô no forróbodó
+                  Ninguém bodô no forróbodó
+
+                  Ô mana deixa eu ir
+                  Ô mana eu não vou só
+                  Ô mana deixa eu ir pro Forróbodó
+                  Bem pra cá do Caicó
+
+                  Pro Forróbodó
+                  Bem pra cá do Caicó
+                  Pro Forróbodó
+                  Bem pra cá do Caicó
+                  Pro Forróbodó
+                  Bem pra cá do Caicó
+                  Pro Forróbodó
+                  Bem pra cá do Caicó
+
+                <h1>              FINAL DO BLOCO FORRO LENTO 1 </h1>
+
+
+
+                </pre>
+            </div>
+        </div>
+
+        <div class="song">
+            <div class="song-info">
+                <div class="song-title" onclick="showLyrics('forro-lento-2')"> <h2>FORRÓ LENTO 2 </h2></div>
+                <h3>Hora do adeus</h3>
+                <h3>Fazenda cacimba nova</h3>
+                <h3>Forró casamenteiro </h3>
+                <h3>Forró de tamanco </h3>
+                <h3>Sanfona sentida</h3>
+            </div>
+            <div class="song-lyrics" id="forro-lento-2">
+                <pre>
+                    <B>Hora do Adeus
+                        Luiz Gonzaga
+                    </B>
+                    O meu cabelo já começa prateando
+                    Mas a sanfona ainda não desafinou
+                    A minha voz vocês reparem eu cantando
+                    Que é a mesma voz de quando meu reinado começou
+
+                    Modéstia à parte, mas se eu não desafino
+                    Desde o tempo de menino
+                    Em Exu, no meu sertão
+                    Cantava solto que nem cigarra vadia
+                    E é por isso que hoje em dia
+                    Ainda sou o rei do baião
+
+                    Eu agradeço, ao povo brasileiro
+                    Norte, Centro, Sul inteiro
+                    Onde reinou o baião
+                    Se eu mereci minha coroa de rei
+                    Esta sempre eu honrei
+                    Foi a minha obrigação
+
+                    Minha sanfona minha voz o meu baião
+                    Este meu chapéu de couro e também o meu gibão
+                    Vou juntar tudo, dar de presente ao museu
+                    É a hora do adeus
+                    De Luiz rei do baião
+
+
+                    <B>Cacimba Nova
+                        
+                    </B>
+                    Fazenda Cacimba Nova
+                    Foi bonito o teu passado
+                    Ainda estás dando a prova
+                    Pelo o que vê-se a teu lado
+                    Um curral grande, pendido
+                    Um carro velho, esquecido
+                    Pelo sol todo encardido
+                    Sentido, sem paradeiro
+                    Falta de juntas de bois
+                    Que lhe levavam de dois
+                    Obedecendo ao carreiro
+
+                    Resistente casarão
+                    Em ti as festas rolavam
+                    Quando os vaqueiros brincavam
+                    Em corridas de mourão
+                    Um touro velho berrando
+                    No tronco do pau fungando
+                    Os seus chifres amolando
+                    Com o maior desespero
+                    Um heroísmo tamanho
+                    Em defesa do rebanho
+                    Fazendo medo a vaqueiro
+
+                    Quem te vê sai suspirando
+                    Lamentando cada instante
+                    Vendo o tempo devorando
+                    O teu passado brilhante
+                    Mas rogo a Deus para um dia
+                    Reinar-te ainda alegria
+                    Paz, sossego e harmonia
+                    Voltando a felicidade
+                    Que um sentimental vaqueiro
+                    Passando no seu terreiro
+                    Solte um aboio de saudade
+                    E, e, e, o, e
+                    E, boi
+
+                    <B>Forró Casamenteiro
+                        Os 3 do Nordeste
+                    </B>
+                    Nesse forró mulher não fica pra titia
+                    em um padre e tem juiz, tem até a sacristia
+                    Pode dançar a vontade, se agarrar com alegria
+                    Com toda liberdade, mexer no que não mexia
+                    Brincar a noite toda sem acanhamento
+                    Porque o casamento o padre faz no outro dia
+
+                    A senhorita que já ta no caritó
+                    Venha logo pro forró pra acabar com essa mania
+                    De viver se lamentando de fazer o que fazia
+                    Vai logo se arrumando se era isso que queria
+                    Não ligue pra besteira, acabe esse lamento
+                    Porque o casamento o padre faz num outro dia
+
+                    Homem casado pra entrar nesse forró
+                    Tem que ser de palito e trazer sua maria
+                    Dançar com muito respeito cavalheiro e companhia
+                    Se não dançar direito a gente chama a policia
+                    Porque o casamento é pra quem ta no caritó
+                    E aqui nesse forró o padre casa todo dia
+
+
+
+                    <B>Forró de tamanco
+                        Os 3 do Nordeste
+                    </B>
+                    No meu forró, entra preto e branco
+                    Quero ver todo mundo calçadinho de tamanco
+                    A noite inteira quero ver o barulhão
+                    Das menininhas arrastando tamanco no chão
+                    
+                    É, é, de tamanco, mulher
+                    
+                    No meu tempo de criança
+                    Eu era menino chato
+                    Que não me falhe a lembrança
+                    Eu só andava de sapato
+                    Mas agora eu sou grande
+                    E mudei de opinião
+                    Acho muito bonitinho
+                    O arrastado do tamanco no chão
+                    
+                    É, é, de tamanco, mulher
+                    
+                    No meu forró, entra preto e branco
+                    Quero ver todo mundo calçadinho de tamanco
+                    A noite inteira quero ver o barulhão
+                    Das menininhas arrastando tamanco no chão
+                    
+                    É, é, de tamanco, mulher
+                    
+                    No meu tempo de criança
+                    Eu era menino chato
+                    Que não me falhe a lembrança
+                    Eu só andava de sapato
+                    Mas agora eu sou grande
+                    E mudei de opinião
+                    Acho muito bonitinho
+                    O arrastado do tamanco no chão
+                    
+                    É, é, de tamanco, mulher
+                    É, é, de tamanco, mulher
+
+                    <B>Sanfona Sentida
+                        Dominguinhos
+                    </B>
+                    Vem amor, vem cantar
+                    Pois meus olhos
+                    Ficam querendo chorar
+                    Deixe a mágoa pra depois
+                    O amor é mais importante a dois.
+                    
+                    Chora sanfona sentida
+                    Em meu peito gemendo
+                    Vai machucando
+                    E o meu peito de amor vai morrendo
+                    
+                    Quanto mais chora
+                    Me entrego todinho ao amor
+                    E teu gemido disfarça
+                    Em m´alma essa dor
+                    
+
+
+
+
+                </pre>
+            </div>
+        </div>
+    
+
+
+    <div class="song">
+        <div class="song-info">
+            <div class="song-title" onclick="showLyrics('forro-lento-3')"> <h2>FORRÓ LENTO 3 </h2></div>
+            <h3>Sebastiana</h3>
+            <h3>Canto da ema</h3>
+            <h3>Baile da gabriela </h3>
+            <h3>Forró do xililique </h3>
+            <h3>Forró desarmado</h3>
+        </div>
+        <div class="song-lyrics" id="forro-lento-3">
+            <pre>
+                <B>Sebastiana
+                    Luiz Gonzaga
+                </B>
+                Convidei a comadre Sebastiana
+                Pra cantar e xaxar na Paraíba
+                
+                Ela veio com uma dança diferente
+                E pulava que só uma guariba
+                
+                E gritava a, e, i, o, u, ipsilone
+                
+                Já cansada no meio da brincadeira
+                E dançando fora do compasso
+                Segurei Sebastiana pelo braço
+                E gritei não faça sujeira
+                O xaxado esquentou na gafieira
+                Sebastiana não deu mais fracasso
+                
+                E gritava a, e, i, o, u, ipsilone
+                
+                Convidei a comadre Sebastiana
+                Pra cantar e xaxar na Paraíba
+                
+                Ela veio com uma dança diferente
+                E pulava que só uma guariba
+                
+                E gritava a, e, i, o, u, ipsilone
+                
+                Já cansada no meio da brincadeira
+                E dançando fora do compasso
+                Segurei Sebastiana pelo braço
+                E gritei não faça sujeira
+                O xaxado esquentou na gafieira
+                Sebastiana não deu mais fracasso
+                
+                E gritava a, e, i, o, u, ipsilone
+                
+                Mas gritava a, e, i, o, u, ipsilone
+                
+                E gritava a, e, i, o, u, ipsilone
+
+
+
+                <B>Canto da ema
+                </B>
+                A ema gemeu
+                No tronco do juremá
+                A ema gemeu
+                No tronco do juremá
+                
+                Foi um sinal bem triste, morena
+                Fiquei a imaginar
+                Será que é o nosso amor, morena
+                Que vai se acabar?
+                
+                Você bem sabe
+                Que a ema quando canta
+                Vem trazendo no seu canto
+                Um bocado de azar
+                
+                Eu tenho medo
+                Pois acho que é muito cedo
+                Muito cedo, meu benzinho
+                Para esse amor se acabar
+                
+                Vem morena (vem, vem, vem)
+                Me beijar (me beijar)
+                Dá um um beijo (dá um beijo)
+                Pra esse medo (se acabar)
+                
+                Diz que a ema gemeu
+                No tronco do juremá
+                A ema gemeu
+                No tronco do juremá
+                
+                Foi um sinal bem triste, morena
+                Fiquei a imaginar
+                Será que é o nosso amor, morena
+                Que vai se acabar?
+                
+                Você bem sabe
+                Que a ema quando canta
+                Vem trazendo no seu canto
+                Um bocado de azar
+                
+                Eu tenho medo
+                Pois acho que é muito cedo
+                Muito cedo, meu benzinho
+                Para esse amor se acabar
+                
+                Vem morena (vem, vem, vem)
+                Me beijar (me beijar)
+                Dá um beijo (dá um beijo)
+                Pra esse medo (se acabar)
+                
+                Você bem sabe
+                Que a ema quando canta
+                Vem trazendo no seu canto
+                Um bocado de azar
+                
+                Eu tenho medo
+                Pois acho que é muito cedo
+                Muito cedo, meu benzinho
+                Para esse amor se acabar
+                
+                Vem morena (vem, vem, vem)
+                Me beijar (me beijar)
+                Dá um beijo (dá um beijo)
+                Pra esse medo (se acabar)
+                
+                Diz que a ema gemeu
+                No tronco do juremá
+                A ema gemeu
+                No tronco do juremá
+                
+                Foi um sinal bem triste, morena
+                Fiquei a imaginar
+                Será que é o nosso amor, morena
+                Que vai se acabar?
+                
+                A ema gemeu
+                No tronco do juremá
+                A ema gemeu
+                No tronco do juremá
+
+
+                <B>Baile da Gabriela
+                </B>
+                eu fui dançar um baile na casa da Gabriela
+                nunca vi coisa tão boa foi na base da chinela (2x)
+                o sujeito ia chegando tirando logo o sapato
+                se tivesse de butina sola grossa e bico chato
+                entrava pra dançar no baile da Gabriela
+                tirando meia e sapato calçando um par de chinela
+                eu fui dançar um baile na casa da Gabriela
+                nunca vi coisa tão boa foi na base da chinela (2x)
+                o baile tava animado só na base da chinela
+                toda turma desputava dançar com a Gabriela
+                requebrava aquela base no salão só tinha ela
+                todo convidado ria gostando da base dela
+                jogaram no salão pimenta bem machucada
+                e o baile da Gabriela acabou com chinelada
+                eu fui dançar um baile na casa da Gabriela
+                nunca vi coisa tão boa foi na base da chinela (2x)
+
+
+                <B>Forró do xililique
+                </B>
+                    O maior forró pelo que eu ouvir dizer (
+                    É na praia da ilha, você pode crer
+                    
+                    Que as dez da noite, o forró já tá de pé
+                    Sanfoneiro abre a sanfona e só se vê chegá mulher
+                    Tem do café ao caldo de feijão no bar
+                    Com meia légua de escuta, o som do chinelo chiar
+                    
+                    É chililique, chililique, chililique,
+                    Chililique, chililique, a poeira lavantar
+                    É chililique, chililique, chililique,
+                    Se a gente quer um repique o cabra no zabumba dá.
+
+                    <B>Forró desarmado
+                    </B>
+                    Pode dançar a noite inteira, até amanhecer o dia
+                    Por que a nossa brincadeira, é uma eterna alegria
+                    Mas o senhor não tem respeito, é um homem mal educado
+                    Sabe que não é de direito, o senhor tá dançando armado
+                    O senhor tá dançando armado, o senhor tá dançando armado
+                    O senhor tá dançando armado, nós vamos dizer pro delegado
+                    
+                    Todo mundo se desarmou, prá poder dançar com mais jeito
+                    A mulherada até que gostou, achou isso muito bem feito
+                    Só o senhor tá disconforme, então vai ser logo encanado
+                    Porque a polícia não dorme, e nós vamos dizer pro delegado
+                    O senhor tá dançando armado, o senhor tá dançando armado
+                    O senhor tá dançando armado, nós vamos dizer pro delegado
+
+
+            </pre>
+        </div>
+    </div>
+
+    <div class="song">
+        <div class="song-info">
+            <div class="song-title" onclick="showLyrics('forro-speed')"> <h2>FORRÓ SPEED </h2></div>
+            <h3>Açucar no café </h3>
+            <h3>Toque de fole</h3>
+            <h3>É proibido cochilar </h3>
+            <h3>Da boca pra fora</h3>
+            <h3>Feira de mangaio</h3>
+        </div>
+        <div class="song-lyrics" id="forro-speed">
+            <pre>
+                <B>Açucar no café
+
+                </B>
+                Eu danço com ela de chinelo
+                E ela também de chinelo
+                A gente faz a poeira levantar
+                
+                É cá e lá é cá
+                É um chamego da molesta
+                A gente entra na festa
+                Já botando pra quebrar
+                O povo fica besta, diz que tá bom, que tá bom
+                Que a gente é bom no pé
+                
+                E a gente faz aquele passo miudinho
+                No escuro, agarradinho, bota açúcar no café
+                
+                No café, no café
+                A gente no escuro
+                Bota açúcar no café
+                
+                Olha, o forró só é gostoso, quando tem muita mulher
+                Mas quando tá eu e ela arrastando o pé
+                Apaga o candeeiro, aí eu nem vejo
+                Só sei que quando beijo, boto açúcar no café
+
+
+                <B>Toque de fole
+                </B>
+                Toque sanfoneiro
+                Um forró bem animado
+                Com cadencia de xaxado
+                Pra poeira levantar
+                
+                Toque sanfoneiro
+                As mulheres estão dizendo
+                O fole foi se tocando
+                Castigando a nota lá
+                
+                Toque sanfoneiro
+                Mostre que o velho baixo
+                Castigando o outro baixo
+                Até o dia clarear
+                
+                Toque sanfoneiro toque
+                Porque a gente quer se esbaldar
+                Toque sanfoneiro toque
+                Porque a gente quer dançar
+                
+                Dedo no couro, é pandeirada
+                E na zabumba, é zabumbada
+                E no triangulo, é trianglada
+                Dedo no fole, é forrozada
+                
+                
+                <B>É proibido cochilar
+                </B> 
+                O forró daqui é melhor do que o teu
+                o sanfoneiro é muito melhor
+                as moreninhas a noite inteira
+                na brincadeira levanta pó
+                
+                É animado ninguém cochila,
+                chega faz fila pra dançar
+                na entrada está escrito
+                é proibido cochilar
+                
+                É proibido cochilar,
+                cochilar, cochilar
+                É proibido cochilar,
+                cochilar, cochilar
+                
+                A poeira sobe o suor desce
+                a gente vê o sol raiar
+                o sanfoneiro padece,
+                mas não pode reclamar
+                
+                está ganhando dinheiro
+                é bom dinheiro ganhar
+                e ele leu na entrada que
+                é proibido cochilar
+                
+                É proibido cochilar,
+                cochilar, cochilar
+                É proibido cochilar,
+                cochilar, cochilar
+                É proibido cochilar,
+                cochilar, cochilar
+                É proibido cochilar,
+                cochilar, cochilar
+                
+                (repete tudo)
+
+        
+                <B>Da Boca Pra Fora
+                </B> 
+                Quando eu digo que não te quero
+                É da boca pra fora
+                Quando não falo contigo
+                É tudo da boca pra fora
+                Meu coração dispara
+                Quando a gente se devora
+                Uma briga sem trégua
+                Vejo até chegar a hora
+                Mas não se importe comigo
+                Quando digo que vou embora
+                É da boca pra fora, meu bem
+                É da boca pra fora
+                
+                O que os olhos não vêem
+                O coração não sente
+                Cá dentro do meu peito
+                É muito diferente
+                Mas a bobagem o que eu digo
+                Aqui do lado de fora
+                É da boca pra fora, meu bem
+                É da boca pra fora
+
+
+                <B>Da Boca Pra Fora
+                </B> 
+                Fumo de rolo, arreio de cangalha
+                Eu tenho pra vender, quem quer comprar?
+                Bolo de milho, broa e cocada
+                Eu tenho pra vender, quem quer comprar?
+                
+                Pé de moleque, alecrim, canela
+                Moleque, sai daqui, me deixa trabalhar
+                E Zé saiu correndo pra Feira Dos Pássaros
+                E foi passo-voando pra todo lugar
+                
+                Tinha uma vendinha no canto da rua
+                Onde o mangaieiro ia se animar
+                Tomar uma bicada com lambu assado
+                E olhar pra Maria do Juá
+                Tinha uma vendinha no canto da rua
+                Onde o mangaieiro ia se animar
+                Tomar uma bicada com lambu assado
+                E olhar pra Maria do Juá
+                
+                Cabresto de cavalo e rabichola
+                Eu tenho pra vender, quem quer comprar?
+                Farinha, rapadura e graviola
+                Eu tenho pra vender, quem quer comprar?
+                
+                Pavio de candeeiro, panela de barro
+                Menino, vou-me embora, tenho que voltar
+                Xaxar o meu roçado, que nem boi de carro
+                Alpargata de arrasto não quer me levar
+                
+                Porque tem um sanfoneiro no canto da rua
+                Fazendo floreio pra gente dançar
+                Tem Zefa de Porcina fazendo renda
+                E o ronco do fole sem parar
+                Mas é que tem um sanfoneiro no canto da rua
+                Fazendo floreio pra gente dançar
+                Tem Zefa de Porcina fazendo renda
+                E o ronco do fole sem parar
+                
+                Ei, forró da muléstia!
+                
+                Fumo de rolo, arreio de cangalha
+                Eu tenho pra vender, quem quer comprar?
+                Bolo de milho, broa e cocada
+                Eu tenho pra vender, quem quer comprar?
+                
+                Pé de moleque, alecrim, canela
+                Moleque, sai daqui, me deixa trabalhar
+                E Zé saiu correndo pra Feira Dos Pássaros
+                E foi passo-voando pra todo lugar
+                
+                Tinha uma vendinha no canto da rua
+                Onde o mangaieiro ia se animar
+                Tomar uma bicada com lambu assado
+                E olhar pra Maria do Juá
+                Mas é que tem um sanfoneiro no canto da rua
+                Fazendo floreio pra gente dançar
+                Tem Zefa de Porcina fazendo renda
+                E o ronco do fole sem parar
+                
+                Eita, sanfoneiro da gota serena!
+
+
+            </pre>
+        </div>
+    </div>
+
+    <div class="song">
+        <div class="song-info">
+            <div class="song-title" onclick="showLyrics('xote')"> <h2>XOTE</h2></div>
+            <h3>Até Mais Ver </h3>
+            <h3>Xote das meninas</h3>
+            <h3>Rindo a toa</h3>
+            <h3>Xote dos milagres</h3>
+            <h3>Preciso do teu sorriso</h3>
+        </div>
+        <div class="song-lyrics" id="xote">
+            <pre>
+                <B>Até Mais Ver
+                    
+                </B>
+                Se eu morasse aqui pertinho nega
+                Todo dia eu vinha te ver
+                Lhe trazia um par de cheiro nega
+                Pra derramar em você
+                
+                Bota o teu vestido novo nega
+                Venha antes de chover
+                Bota o teu vestido novo, nega
+                Se tirar me dar prazer
+                
+                E quando chego no riacho
+                Vou metendo a mão por baixo e arrancando o girassol
+                E cantado um belo xote, dando cheiro no cangote
+                Por baixo do lençol
+                
+                Lá se foi a Lua cheia já é meia noite e meia
+                Até logo, até mais ver
+                Se eu morasse aqui pertinho nega
+                Todo dia eu vinha te ver
+                
+                Se eu morasse aqui pertinho nega
+                Todo dia eu vinha te ver
+                Lhe trazia um par de cheiro nega
+                Pra derramar em você
+                
+                Bota o teu vestido novo nega
+                Venha antes de chover
+                Bota o teu vestido novo, nega
+                Se tirar me dar prazer
+                
+                E quando chego no riacho
+                Vou metendo a mão por baixo e arrancando o girassol
+                E cantado um belo xote, dando cheiro no cangote
+                Por baixo do lençol
+                
+                Lá se foi a Lua cheia já é meia noite e meia
+                Até logo, até mais ver
+                Se eu morasse aqui pertinho nega
+                Todo dia eu vinha te ver
+
+                <B>Xote das meninas
+                </B> 
+                Mandacaru quando fulora na seca
+                É o sinal que a chuva chega no sertão
+                Toda menina que enjoa da boneca
+                É sinal que o amor já chegou no coração
+                Meia comprida, não quer mais sapato baixo
+                Vestido bem cintado, não quer mais vestir timão
+                
+                Ela só quer, só pensa em namorar
+                Ela só quer, só pensa em namorar
+                
+                De manhã cedo já tá pintada
+                Só vive suspirando, sonhando acordada
+                O pai leva ao dotô a filha adoentada
+                Não come, nem estuda
+                Não dorme e nem quer nada
+                
+                Ela só quer, só pensa em namorar
+                Ela só quer, só pensa em namorar
+                
+                Mas o dotô nem examina
+                Chamando o pai do lado, lhe diz logo em surdina
+                Que o mal é da idade e que pra tal menina
+                Não tem um só remédio em toda medicina
+                
+                Ela só quer, só pensa em namorar
+                Ela só quer, só pensa em namorar
+                
+                Mandacaru, quando fulora na seca
+                É o sinal que a chuva chega no sertão
+                Toda menina que enjoa da boneca
+                É sinal que o amor já chegou no coração
+                Meia comprida, não quer mais sapato baixo
+                Vestido bem cintado, não quer mais vestir timão
+                
+                Ela só quer, só pensa em namorar
+                Ela só quer, só pensa em namorar
+                
+                De manhã cedo já tá pintada
+                Só vive suspirando, sonhando acordada
+                O pai leva ao dotô a filha adoentada
+                Não come, nem estuda
+                Não dorme e nem quer nada
+                
+                Ela só quer, só pensa em namorar
+                Ela só quer, só pensa em namorar
+                
+                Mas o dotô nem examina
+                Chamando o pai do lado, lhe diz logo em surdina
+                Que o mal é da idade e que pra tal menina
+                Não tem um só remédio em toda medicina
+                
+                Ela só quer, só pensa em namorar
+                Ela só quer, só pensa em namorar
+
+
+                <B>Rindo à Toa
+                </B> 
+                 Tô numa boa, tô aqui de novo
+                Daqui não saio, daqui não me movo
+                Tenho certeza, esse é o meu lugar
+                Aha-aha
+                
+                Tô numa boa, tô ficando esperto
+                Já não pergunto se isso tudo é certo
+                Uso esse tempo pra recomeçar
+                Aha-aha
+                
+                Doeu, doeu, agora não dói
+                Não dói, não dói
+                Chorei, chorei
+                Agora não choro mais
+                
+                Toda mágoa que passei
+                É motivo pra comemorar
+                Pois se não sofresse assim
+                Não tinha razões pra cantar
+                
+                Ha-ha-ha-ha-ha
+                Mas eu tô rindo à toa
+                Não que a vida esteja assim tão boa
+                Mas um sorriso ajuda a melhorar
+                Aha-aha
+                
+                E cantando assim parece que o tempo voa
+                Quanto mais triste, mais bonito soa
+                Eu agradeço por poder cantar
+                Lalaiá-laiá-laiá-iê
+                
+                Tô numa boa, tô aqui de novo
+                Daqui não saio, daqui não me movo
+                Tenho certeza, esse é o meu lugar
+                Aha-aha
+                
+                Tô numa boa, tô ficando esperto
+                Já não pergunto se isso tudo é certo
+                Uso esse tempo pra recomeçar
+                Aha-aha
+                
+                Doeu, doeu, agora não dói
+                Não dói, não dói
+                Chorei, chorei
+                Agora não choro mais
+                
+                Toda mágoa que passei
+                É motivo pra comemorar
+                Pois se não sofresse assim
+                Não tinha razões pra cantar
+                
+                Ha-ha-ha-ha-ha
+                Mas eu tô rindo à toa
+                Não que a vida esteja assim tão boa
+                Mas um sorriso ajuda a melhorar
+                Aha-aha
+                
+                E cantando assim parece que o tempo voa
+                Quanto mais triste, mais bonito soa
+                Eu agradeço por poder cantar
+                Lalaiá-laiá-laiá-iê
+                (Simbora)
+
+
+                <B>Xote dos Milagres
+                </B>
+                Escrevi seu nome na areia
+                O sangue que corre em mim
+                Sai da tua veia
+                
+                Veja só, você é a única
+                Que não me dá valor
+                Então por que será que este valor
+                É o que eu ainda quero ter?
+                
+                Tenho tudo nas mãos
+                Mas não tenho nada
+                Então melhor ter nada
+                E lutar pelo que eu quiser
+                
+                Ê, mas peraê
+                Ouça o forró tocando
+                E muita gente aê
+                Não é hora pra chorar
+                
+                Porém, não é pecado
+                Se eu falar de amor
+                Se eu canto sentimento
+                Seja ele qual for
+                
+                Me leva onde eu quero ir
+                Se quiser, também pode vir
+                Escuta o meu coração
+                Que bate no compasso
+                Da zabumba de paixão
+                
+                Ê, pra surdo ouvir, pra cego ver
+                Que este xote faz milagre acontecer
+                Ê, pra surdo ouvir, pra cego ver
+                Que este xote faz milagre acontecer
+                
+                Ê, pra surdo ouvir, pra cego ver
+                Que este xote faz milagre acontecer
+                Ê, pra surdo ouvir, pra cego ver
+                Falamansa faz milagre acontecer
+                
+                Eu escrevi seu nome na areia
+                O sangue que corre em mim
+                Sai da tua veia
+                
+                Veja só, você é a única
+                Que não me dá valor
+                Então por que será que este valor
+                É o que eu ainda quero ter?
+                
+                Tenho tudo nas mãos
+                Mas não tenho nada
+                Então melhor ter nada
+                E lutar pelo que eu quiser
+                
+                Ê, mas peraê
+                Ouça o forró tocando
+                E muita gente aê
+                Não é hora pra chorar
+                
+                Porém, não é pecado
+                Se eu falar de amor
+                Se eu canto sentimento
+                Seja ele qual for
+                
+                Me leva onde eu quero ir
+                Se quiser, também pode vir
+                Escuta o meu coração
+                Que bate no compasso
+                Da zabumba de paixão
+                
+                Ê, pra surdo ouvir, pra cego ver
+                Que este xote faz milagre acontecer
+                Ê, pra surdo ouvir, pra cego ver
+                Que este xote faz milagre acontecer
+                
+                Ê, pra surdo ouvir, pra cego ver
+                Que este xote faz milagre acontecer
+                Ê, pra surdo ouvir, pra cego ver
+                Falamansa faz milagre acontecer
+
+
+                <B>Preciso do Teu Sorriso
+                </B>
+                Preciso desse seu amor
+                Ai, amor como preciso
+                Não é fácil viver
+                Sem seus beijos, seu sorriso
+                
+                Não posso ficar sem você
+                Pois viver sem você
+                É viver pra chorar
+                
+                Fala meu amor
+                Diga meu amor
+                Que não vai judiar comigo
+                
+                Espera meu amor
+                Fica meu amor
+                Então me leva pra morar contigo
+                Preciso desse seu amor
+                Ai, amor como preciso
+                Não é fácil viver
+                Sem seus beijos, seu sorriso
+                
+                Não posso ficar sem você
+                Pois viver sem você
+                É viver pra chorar
+                
+                Fala meu amor
+                Diga meu amor
+                Que não vai judiar comigo
+                
+                Espera meu amor
+                Fica meu amor
+                Então me leva pra morar contigo
+                
+                Aonde quer que você vá
+                Seja onde for
+                Me leva
+                Me leva
+                
+                Diz amor que eu vou
+                Me leva
+                Me leva
+                
+                Seja como for seu mundo
+                Se você me leva eu vou
+
+            </pre>
+        </div>
+    </div>
+
+
+    <div class="song">
+        <div class="song-info">
+            <div class="song-title" onclick="showLyrics('xote2')"> <h2>XOTE 2</h2></div>
+            <h3>Sem ferrolho e sem tramela </h3>
+            <h3>Mala e cuia</h3>
+            <h3>Seu olhar não mente</h3>
+            <h3>Mensageiro beija-flor</h3>
+            <h3>Quando bate o coração</h3>
+        </div>
+        <div class="song-lyrics" id="xote2">
+            <pre>
+                <B>Hora do Adeus
+                    Luiz Gonzaga
+                </B>
+
+            </pre>
+        </div>
+    </div>
+
+    <div class="song">
+        <div class="song-info">
+            <div class="song-title" onclick="showLyrics('xote3')"> <h2>XOTE 3</h2></div>
+            <h3>A natureza das coisas </h3>
+            <h3>Neném mulher/o neném</h3>
+            <h3>Luiz respeita januário</h3>
+            <h3>Riacho do navio</h3>
+            
+        </div>
+        <div class="song-lyrics" id="xote3">
+            <pre>
+                <B>Hora do Adeus
+                    Luiz Gonzaga
+                </B>
+
+            </pre>
+        </div>
+    </div>
+
+
+    <div class="song">
+        <div class="song-info">
+            <div class="song-title" onclick="showLyrics('xote4')"> <h2>XOTE 4</h2></div>
+            <h3>Sala de reboco </h3>
+            <h3>Meu cenário</h3>
+            <h3>Esoumas ao vento</h3>
+            <h3>Lembrança de um beijo</h3>
+            <h3>Tareco e mariola</h3>
+            
+        </div>
+        <div class="song-lyrics" id="xote4">
+            <pre>
+                <B>Hora do Adeus
+                    Luiz Gonzaga
+                </B>
+
+            </pre>
+        </div>
+    </div>
+
+    <div class="song">
+        <div class="song-info">
+            <div class="song-title" onclick="showLyrics('xote5')"> <h2>XOTE 5</h2></div>
+            <h3>Dificil demais</h3>
+            <h3>Eu me lembro</h3>
+            <h3>Procurando tú</h3>
+            <h3>Filho do dono</h3>
+            <h3>Petrolina juazeiro</h3>
+            
+        </div>
+        <div class="song-lyrics" id="xote5">
+            <pre>
+                <B>Hora do Adeus
+                    Luiz Gonzaga
+                </B>
+
+            </pre>
+        </div>
+    </div>
+
+    <div class="song">
+        <div class="song-info">
+            <div class="song-title" onclick="showLyrics('xote6')"> <h2>XOTE 6</h2></div>
+            <h3>Pra que dividir</h3>
+            <h3>Canção da saudade</h3>
+            <h3>Súplica cearense</h3>
+            <h3>Sua ingratidão</h3>
+            <h3>As mocinhas da cidade</h3>
+            
+        </div>
+        <div class="song-lyrics" id="xote6">
+            <pre>
+                <B>Hora do Adeus
+                    Luiz Gonzaga
+                </B>
+
+            </pre>
+        </div>
+    </div>
+
+
+    <div class="song">
+        <div class="song-info">
+            <div class="song-title" onclick="showLyrics('xote7')"> <h2>XOTE 7</h2></div>
+            <h3>A morte do vaqueiro</h3>
+            <h3>Boiadeiro</h3>
+            <h3>Cigarro de palha</h3>
+            <h3>Cheiro da carolina</h3>
+            <h3>Sabiá</h3>
+            
+        </div>
+        <div class="song-lyrics" id="xote7">
+            <pre>
+                <B>Hora do Adeus
+                    Luiz Gonzaga
+                </B>
+
+            </pre>
+        </div>
+    </div>
+
+    <div class="song">
+        <div class="song-info">
+            <div class="song-title" onclick="showLyrics('xote-flavio')"> <h2>XOTE FLÁVIO</h2></div>
+            <h3>Que nem vem vem</h3>
+            <h3>Me diz amor</h3>
+            <h3>Caia por cima de min</h3>
+            <h3>Casa da saudade</h3>
+            <h3>Esperando na janela</h3>
+            
+        </div>
+        <div class="song-lyrics" id="xote-flavio">
+            <pre>
+                <B>Hora do Adeus
+                    Luiz Gonzaga
+                </B>
+
+            </pre>
+        </div>
+    </div>
+
+    <div class="song">
+        <div class="song-info">
+            <div class="song-title" onclick="showLyrics('Arrastapé')"> <h2>ARRASTAPÉ</h2></div>
+            <h3>Aproveita gente</h3>
+            <h3>Nem se despediu de min</h3>
+            <h3>Pagode russo</h3>
+            <h3>Naquele são joão</h3>
+            <h3>Eu quero chá</h3>
+            <h3>Na emenda</h3>
+            <h3>Pra tirar coco</h3>
+        </div>
+        <div class="song-lyrics" id="Arrastapé">
+            <pre>
+                <B>Hora do Adeus
+                    Luiz Gonzaga
+                </B>
+
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+</div>
+  <script>
+        const searchInput = document.getElementById('search');
+        const songsDiv = document.getElementById('songs');
+        const songList = document.querySelectorAll('.song');
+        const backButton = document.querySelector('.back-button');
+        const playPauseButton = document.getElementById('playPause');
+        const scrollSpeedInput = document.getElementById('scrollSpeed');
+        const scrollControlsDiv = document.getElementById('scrollControls'); // Nova linha
+        let scrollInterval;
+        let isPlaying = false;
+        let currentLyricsDiv = null; // Variável para armazenar a div de letras atualmente visível
+
+        function filterSongs() {
+            const query = searchInput.value.toLowerCase();
+            songList.forEach(song => {
+                const title = song.querySelector('.song-info').textContent.toLowerCase(); // Busca no texto do song-info
+                song.style.display = title.includes(query) ? '' : 'none';
+            });
+        }
+
+        function showLyrics(id) {
+            searchInput.style.display = 'none';
+            document.querySelectorAll('.song').forEach(song => {
+                song.querySelector('.song-info').classList.add('hidden');
+                song.querySelector('.song-lyrics').style.display = 'none';
+            });
+            currentLyricsDiv = document.getElementById(id);
+            console.log("showLyrics chamado com ID:", id, "e currentLyricsDiv:", currentLyricsDiv);
+            currentLyricsDiv.style.display = 'block';
+            backButton.style.display = 'block';
+            scrollControlsDiv.style.display = 'flex'; // Mostra os controles
+            // startAutoScroll(currentLyricsDiv); // REMOVI A CHAMADA PARA INICIAR PAUSADO
+        }
+
+        function showList() {
+            searchInput.style.display = '';
+            songList.forEach(song => {
+                song.querySelector('.song-info').classList.remove('hidden');
+                song.querySelector('.song-lyrics').style.display = 'none';
+            });
+            backButton.style.display = 'none';
+            stopAutoScroll();
+            currentLyricsDiv = null;
+            scrollControlsDiv.style.display = 'none'; // Esconde os controles
+        }
+
+        function startAutoScroll(lyricsDiv) {
+            console.log("startAutoScroll chamado com:", lyricsDiv);
+            if (!lyricsDiv) {
+                console.log("startAutoScroll recebeu lyricsDiv nulo ou indefinido");
+                return; // Evita erros se não houver letras visíveis
+            }
+            stopAutoScroll(); // Limpa qualquer intervalo anterior
+            isPlaying = true;
+            playPauseButton.textContent = 'Pause';
+            const speed = parseInt(scrollSpeedInput.value, 10);
+            const delay = 200 - speed; // Ajuste para velocidade (quanto maior o speed, menor o delay)
+
+            scrollInterval = setInterval(() => {
+                lyricsDiv.scrollTop += 1;
+                console.log("Rolando. scrollTop:", lyricsDiv.scrollTop, "scrollHeight:", lyricsDiv.scrollHeight, "clientHeight:", lyricsDiv.clientHeight);
+                if (lyricsDiv.scrollTop >= lyricsDiv.scrollHeight - lyricsDiv.clientHeight - 1) {
+                    stopAutoScroll();
+                    console.log("Chegou ao final da rolagem.");
+                }
+            }, delay);
+        }
+
+        function stopAutoScroll() {
+            console.log("stopAutoScroll chamado");
+            isPlaying = false;
+            playPauseButton.textContent = 'Play';
+            clearInterval(scrollInterval);
+        }
+
+        playPauseButton.addEventListener('click', () => {
+            console.log("Botão Play/Pause clicado. currentLyricsDiv:", currentLyricsDiv, "isPlaying:", isPlaying);
+            if (currentLyricsDiv) {
+                if (isPlaying) {
+                    stopAutoScroll();
+                } else {
+                    startAutoScroll(currentLyricsDiv);
+                }
+            }
+        });
+
+        scrollSpeedInput.addEventListener('change', () => {
+            console.log("Velocidade alterada para:", scrollSpeedInput.value, "currentLyricsDiv:", currentLyricsDiv, "isPlaying:", isPlaying);
+            if (currentLyricsDiv && isPlaying) {
+                startAutoScroll(currentLyricsDiv); // Reinicia o scroll com a nova velocidade
+            }
+        });
+
+        // Esconde os controles de rolagem inicialmente
+        scrollControlsDiv.style.display = 'none';
+    </script>
+</body>
+</html>
